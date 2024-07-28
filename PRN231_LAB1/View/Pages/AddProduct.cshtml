@@ -1,0 +1,37 @@
+@page
+@model View.Pages.AddProduct
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Product</title>
+</head>
+<body>
+<div class="container">
+    <h1>Add Product</h1>
+    <form method="post">
+        <div class="mb-3">
+            <label for="productName" class="form-label">Product Name:</label>
+            <input type="text" id="productName" name="ProductName" asp-for="Product.ProductName" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label for="weight" class="form-label">Weight:</label>
+            <input type="number" id="weight" name="Weight" asp-for="Product.Weight" class="form-control" step="any" required />
+        </div>
+        <div class="mb-3">
+            <label for="unitPrice" class="form-label">Unit Price:</label>
+            <input type="number" id="unitPrice" name="UnitPrice" asp-for="Product.UnitPrice" class="form-control" step="any" required />
+        </div>
+        <div class="mb-3">
+            <label for="unitsInStock" class="form-label">Units In Stock:</label>
+            <input type="number" id="unitsInStock" name="UnitsInStock" asp-for="Product.UnitsInStock" class="form-control" required />
+        </div>
+        <div class="mb-3">
+            <label for="categoryId" class="form-label">Category</label>
+            <input type="number" id="categoryId" name="categoryId" asp-for="Product.CategoryId" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Product</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@page
+@model View.Pages.Update
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Product</title>
+</head>
+<body>
+<div>
+    <h1>Update Product: @Model.ProductResponseDto.ProductName</h1>
+    <form method="post">
+        <input type="hidden" asp-for="ProductResponseDto.ProductId" />
+        <div class="form-group">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" asp-for="ProductRequestDto.ProductName" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="weight">Weight:</label>
+            <input type="number" id="weight" asp-for="ProductRequestDto.Weight" class="form-control" step="any" required />
+        </div>
+        <div class="form-group">
+            <label for="unitPrice">Unit Price:</label>
+            <input type="number" id="unitPrice" asp-for="ProductRequestDto.UnitPrice" class="form-control" step="any" required />
+        </div>
+        <div class="form-group">
+            <label for="unitsInStock">Units In Stock:</label>
+            <input type="number" id="unitsInStock" asp-for="ProductRequestDto.UnitsInStock" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="categoryId">Category ID:</label>
+            <input type="text" id="categoryId" asp-for="ProductRequestDto.CategoryId" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Update Product</button>
+        <a asp-page="/Product" class="btn btn-secondary ml-2">Back to List</a>
+    </form>
+</div>
+</body>
+</html>
